@@ -1,28 +1,24 @@
-export interface RegisterData {
-    name: string;
-    email: string;
-    password: string;
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  avatarUrl?: string;
+  currentBodyweightKg: number;
+  targetBodyweightKg: number;
+  heightCm: number;
+  trainingSplit: 'Push/Pull/Legs' | 'Upper/Lower' | 'Full Body' | 'Bro Split';
+  experienceLevel: 'Beginner' | 'Intermediate' | 'Advanced';
+  streakDays: number;
+  primaryGoal: 'Strength' | 'Hypertrophy' | 'Fat Loss' | 'General Fitness';
+  joinedDate: string;
+}
 
-    weight: number;
-    height: number;
-    age: number;
-
-    experience:
-        | "Beginner"
-        | "Intermediate"
-        | "Advanced";
-
-    goal:
-        | "Hypertrophy"
-        | "Strength"
-        | "Fat Loss";
-
-    split:
-        | "PPL"
-        | "Upper Lower"
-        | "Arnold"
-        | "Full Body"
-        | "Custom";
-
-    trainingDays: number;
+export interface OnboardingData {
+  name: string;
+  currentBodyweightKg: number;
+  targetBodyweightKg: number;
+  heightCm: number;
+  trainingSplit: 'Push/Pull/Legs' | 'Upper/Lower' | 'Full Body' | 'Bro Split';
+  experienceLevel: 'Beginner' | 'Intermediate' | 'Advanced';
+  primaryGoal: 'Strength' | 'Hypertrophy' | 'Fat Loss' | 'General Fitness';
 }
